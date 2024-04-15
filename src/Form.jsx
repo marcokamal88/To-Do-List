@@ -13,7 +13,7 @@ const Form = () => {
     }
   };
   return (
-    <div>
+    <div className="form">
       <h2>To Do list</h2>
       <input
         type="text"

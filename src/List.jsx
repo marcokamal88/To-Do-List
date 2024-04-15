@@ -29,9 +29,9 @@ const List = () => {
   };
 
   return (
-    <ol>
+    <ol className="list">
       {tasks.map((task, indx) => (
-        <li key={indx}>
+        <li key={indx} className="task">
           <span>{task}</span>
           <button onClick={() => handleDelete(indx)}> Delete</button>
           <button onClick={() => handleUp(indx)}> up</button>
