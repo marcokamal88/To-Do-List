@@ -1,17 +1,13 @@
 /* eslint-disable no-unused-vars */
 import { useTodoContext } from "./provider";
-
+import useAddTask  from "./useAddTask";
 const Form = () => {
-  const {setTasks, newtasks, setNewTask } = useTodoContext();
+  const { setTasks, newtasks, setNewTask } = useTodoContext();
+
   const handleInputChange = (e) => {
     setNewTask(e.target.value);
   };
-  const handleAddTask = () => {
-    if (newtasks.trim() !== "") {
-      setTasks((T) => [...T, newtasks]);
-      setNewTask("");
-    }
-  };
+    
   return (
     <div className="form">
       <h2>To Do list</h2>
@@ -21,8 +17,9 @@ const Form = () => {
         onChange={handleInputChange}
         value={newtasks}
       />
-      <button onClick={handleAddTask}>Add</button>
+      <button onClick={useAddTask()} >Add</button>
     </div>
   );
 };
+
 export default Form;
