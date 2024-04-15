@@ -1,9 +1,8 @@
 /* eslint-disable no-unused-vars */
-import { useContext } from "react";
 import { useTodoContext } from "./provider";
 
 const List = () => {
-  const { tasks, setTasks} = useTodoContext();
+  const {tasks, setTasks} = useTodoContext();
 
   const handleDelete = (indx) => {
     setTasks(tasks.filter((_, i) => i !== indx));

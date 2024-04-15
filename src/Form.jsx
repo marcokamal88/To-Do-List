@@ -1,9 +1,8 @@
 /* eslint-disable no-unused-vars */
-import { useContext } from "react";
 import { useTodoContext } from "./provider";
 
 const Form = () => {
-  const { tasks, setTasks, newtasks, setNewTask } = useTodoContext();
+  const {setTasks, newtasks, setNewTask } = useTodoContext();
   const handleInputChange = (e) => {
     setNewTask(e.target.value);
   };
